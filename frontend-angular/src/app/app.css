@@ -1,0 +1,47 @@
+
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+}
+
+
+
+.dashboard-content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow-y: auto; /* Permite desplazamiento vertical */
+}
+
+/* Scrollbar personalizado para el contenido */
+.dashboard-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard-content::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.dashboard-content::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+.dashboard-content::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-content {
+    margin-left: 0; /* Elimina el margen en móvil ya que el sidebar se oculta */
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .dashboard-content {
+    padding: 1rem 0.5rem;
+  }
+}
