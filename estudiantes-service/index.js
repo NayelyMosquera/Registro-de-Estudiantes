@@ -9,10 +9,10 @@ app.use(express.json());
 let estudiantes = [
     { id: 1, nombre: 'Nayely Mosquera', email: 'nmosquera1039@utm.edu.ec', carreraId: 1 },
     { id: 2, nombre: 'Naiuska Zipa', email: 'nzipa0516@utm.edu.ec', carreraId: 2 },
-    { id: 1, nombre: 'Ines Gallegos', email: 'igallegos5048@utm.edu.ec', carreraId: 1 },
-    { id: 2, nombre: 'Carmen Tuarez', email: 'ctuarez6882@utm.edu.ec', carreraId: 2 }
+    { id: 3, nombre: 'Ines Gallegos', email: 'igallegos5048@utm.edu.ec', carreraId: 1 },
+    { id: 4, nombre: 'Carmen Tuarez', email: 'ctuarez6882@utm.edu.ec', carreraId: 2 }
 ];
-let nextId = 3;
+let nextId = 5;
 
 app.get('/api/estudiantes', (req, res) => {
     res.json(estudiantes);
