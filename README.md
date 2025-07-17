@@ -1,19 +1,69 @@
-# Monorepo: Frontend Angular + Microservicios Node.js
+# Sistema de Gestión de Estudiantes
 
-## Estructura
-- `frontend-angular`: Aplicación Angular standalone para gestión de estudiantes y carreras.
-- `estudiantes-service`: Microservicio Node.js/Express para estudiantes (CRUD, CORS).
-- `carreras-service`: Microservicio Node.js/Express para carreras (CRUD, CORS).
+## Descripción General
 
-## Instrucciones rápidas
+Este proyecto implementa un sistema completo de gestión de estudiantes y carreras utilizando una arquitectura de microservicios. La solución está compuesta por un frontend desarrollado en Angular y dos microservicios backend construidos con Node.js y Express.
 
-### 1. Microservicios
-- Entra a cada carpeta (`estudiantes-service` y `carreras-service`)
-- Ejecuta: `npm install` y luego `node index.js`
+## Arquitectura del Sistema
 
-### 2. Frontend
-- Entra a `frontend-angular`
-- Ejecuta: `npm install` y luego `ng serve`
+### Componentes Principales
+
+- **Frontend Angular**: Aplicación web standalone para la gestión de estudiantes y carreras
+- **Microservicio de Estudiantes**: API REST para operaciones CRUD de estudiantes
+- **Microservicio de Carreras**: API REST para operaciones CRUD de carreras
+
+<h1 align="center">Tecnologías Utilizadas</h1>
+
+<!--tech stack icons-->
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=css,express,html,java,mongodb,tailwind&perlin=14" />
+  </a>
+</p>
+
+## Instalación y Configuración
+
+### Requisitos Previos
+
+- Node.js (versión 16 o superior)
+- npm (versión 8 o superior)
+- Angular CLI (`npm install -g @angular/cli`)
+- MongoDB (local o conexión remota)
+
+### Clonar el Repositorio
+
+```bash
+git clone https://github.com/NayelyMosquera/Registro-de-Estudiantes.git
+cd Registro-de-Estudiantes
+```
+
+### Configuración de Microservicios
+
+1. **Microservicio de Estudiantes**
+   ```bash
+   cd estudiantes-service
+   npm install
+   node index.js
+   ```
+   El servicio se ejecutará en el puerto 3001.
+
+2. **Microservicio de Carreras**
+   ```bash
+   cd carreras-service
+   npm install
+   node index.js
+   ```
+   El servicio se ejecutará en el puerto 3002.
+
+### Configuración del Frontend
+
+1. **Aplicación Angular**
+   ```bash
+   cd frontend-angular
+   npm install
+   ng serve
+   ```
+   La aplicación estará disponible en `http://localhost:4200`.
 
 ---
 
@@ -69,10 +119,32 @@ flowchart TD
 
 
 ---
-## Descripción Detallada
-El sistema de registro de estudiantes está compuesto por las siguientes capas:
-- **Capa Cliente**: Incluye la interfaz de usuario en Angular, que se ejecuta en el puerto 4200 y utiliza SSR para renderizado del lado del servidor.
-- **Capa de Servicios Backend**: Compuesta por microservicios para estudiantes (puerto 3001) y carreras (puerto 3002), que manejan la lógica de negocio.
-- **Capa de Datos**: Bases de datos MongoDB para almacenar información de estudiantes y carreras.
 
+## Funcionalidades
+
+### Gestión de Estudiantes
+- Crear nuevo estudiante
+- Listar todos los estudiantes
+- Actualizar información de estudiante
+- Eliminar estudiante
+
+### Gestión de Carreras
+- Crear nueva carrera
+- Listar todas las carreras
+- Actualizar información de carrera
+- Eliminar carrera
+
+## API Endpoints
+
+### Estudiantes Service (Puerto 3001)
+- `GET /api/estudiantes` - Obtener todos los estudiantes
+- `POST /api/estudiantes` - Crear nuevo estudiante
+- `PUT /api/estudiantes/:id` - Actualizar estudiante
+- `DELETE /api/estudiantes/:id` - Eliminar estudiante
+
+### Carreras Service (Puerto 3002)
+- `GET /api/carreras` - Obtener todas las carreras
+- `POST /api/carreras` - Crear nueva carrera
+- `PUT /api/carreras/:id` - Actualizar carrera
+- `DELETE /api/carreras/:id` - Eliminar carrera
 
